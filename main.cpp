@@ -174,11 +174,11 @@ int main() {
         cout << "\n  CDE  000  001  011  010  100  101  111  110\nAB\n\n";
         for (int row = 0; row < 4; row++) {
             cout << (row == 0 ? "00" : row == 1 ? "01" : row == 2 ? "11" : "10") << "      ";
-            if (row == 3) counter -= 4;
-            if (row == 2) counter += 4;
+            if (row == 3) counter -= 8;
+            if (row == 2) counter += 8;
             iterateKMap(&counter, size, choice, row, expression, minterms);
-            if (row == 3) counter += 4;
-            if (row == 2) counter -= 4;
+            if (row == 3) counter += 8;
+            if (row == 2) counter -= 8;
             cout << endl;
         }
     }
